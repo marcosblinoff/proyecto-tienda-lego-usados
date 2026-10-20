@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrickMarket - Venta de Piezas LEGO Usadas</title>
+    <link rel="stylesheet" href="diseno.css">
+</head>
+<body>
+
+    <header>
+        <h1>🧱 BrickMarket - Piezas Usadas</h1>
+        <p>Catálogo de piezas normales, especiales, minifiguras, animales y series conectadas con Supabase</p>
+    </header>
+
+    <div class="container">
+        <!-- Navegación por tipo de pieza / categoría -->
+        <nav class="categorias-nav">
+            <button class="btn-cat active" onclick="filtrarCategoria('normales', this)">🧱 Piezas Normales</button>
+            <button class="btn-cat" onclick="filtrarCategoria('especiales', this)">⚙️ Piezas Especiales</button>
+            <button class="btn-cat" onclick="filtrarCategoria('munecos', this)">🧑 Muñecos / Minifiguras</button>
+            <button class="btn-cat" onclick="filtrarCategoria('accesorios_munecos', this)">🎩 Accesorios p/ Muñecos</button>
+            <button class="btn-cat" onclick="filtrarCategoria('animales', this)">🐉 Animales / Criaturas</button>
+            <button class="btn-cat" onclick="filtrarCategoria('series', this)">⭐ Series Especiales</button>
+        </nav>
+
+        <!-- Contenedor del catálogo de piezas -->
+        <main id="piezas-container" class="piezas-grid">
+            <div class="loading">Cargando piezas desde Supabase...</div>
+        </main>
+    </div>
+
+    <!-- Carga de la capa de conexión y lógica -->
+    <script src="conexion.js"></script>
+    <script src="logica.js"></script>
+</body>
+</html>
